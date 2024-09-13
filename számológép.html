@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Egyszerű Számológép</title>
+</head>
+<body>
+
+<h1>Számológép</h1>
+
+<input type="text" id="szam1" placeholder="Első szám">
+<input type="text" id="szam2" placeholder="Második szám"><br>
+
+<button onclick="osszead()">Összeadás</button>
+<button onclick="kivon()">Kivonás</button>
+<button onclick="szoroz()">Szorzás</button>
+<button onclick="oszt()">Osztás</button><br>
+
+<p>Eredmény: <span id="eredmeny"></span></p>
+
+<script>
+    function osszead() {
+        var szam1 = parseFloat(document.getElementById("szam1").value);
+        var szam2 = parseFloat(document.getElementById("szam2").value);
+        var eredmeny = szam1 + szam2;
+        document.getElementById("eredmeny").innerText = eredmeny;
+    }
+
+    function kivon() {
+        var num1 = parseFloat(document.getElementById("szam1").value);
+        var num2 = parseFloat(document.getElementById("szam2").value);
+        var result = szam1 - szam2;
+        document.getElementById("eredmeny").innerText = eredmeny;
+    }
+
+    function szoroz() {
+        var num1 = parseFloat(document.getElementById("szam11").value);
+        var num2 = parseFloat(document.getElementById("szam2").value);
+        var result = szam1 * szam2;
+        document.getElementById("eredmeny").innerText = eredmeny;
+    }
+
+    function oszt() {
+        var num1 = parseFloat(document.getElementById("szam1").value);
+        var num2 = parseFloat(document.getElementById("szam2").value);
+        if (num2 === 0) {
+            document.getElementById("eredmeny").innerText = "Hiba: osztás nullával!";
+        } else {
+            var result = szam1 / szam2;
+            document.getElementById("eredmeny").innerText = eredmeny;
+        }
+    }
+</script>
+
+</body>
+</html>
